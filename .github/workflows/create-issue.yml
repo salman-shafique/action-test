@@ -15,7 +15,7 @@ jobs:
       - name: create issue
         uses: salman-shafique/mh-actions@main
         with:
-          url: 'https://salmanshafiq.mantishub.io/api/rest/issues'
+          url: 'https://salmanshafiq.mantishub.io'
           api-key: 'NdemqEpCFK3d5tX_b7bN_0nVR1uySVg1'
           project-id: '1'
           summary: 'New issue created via GitHub Actions'
