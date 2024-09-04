@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout private action repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
         with:
           repository: salman-shafique/mh-actions
           token: ${{ secrets.ACTIONS_PAT }}
