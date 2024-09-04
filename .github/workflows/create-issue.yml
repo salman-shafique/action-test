@@ -19,4 +19,5 @@ jobs:
           api-key: 'NdemqEpCFK3d5tX_b7bN_0nVR1uySVg1'
           project-id: '1'
           summary: 'New issue created via GitHub Actions'
+          category: 'General'
           description: 'Details of the issue...'
