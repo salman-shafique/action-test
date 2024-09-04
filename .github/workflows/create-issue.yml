@@ -15,7 +15,7 @@ jobs:
           token: ${{ secrets.ACTIONS_PAT }}
 
       - name: create issue
-      - uses: vboctor/mh-gh-actions/create-mantis-issue@master
+        uses: vboctor/mh-gh-actions/create-mantis-issue@master
         with:
           url: 'https://salmanshafiq.mantishub.io/api/rest/issues'
           api-key: 'NdemqEpCFK3d5tX_b7bN_0nVR1uySVg1'
