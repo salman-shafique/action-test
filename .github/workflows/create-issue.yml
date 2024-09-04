@@ -1,0 +1,17 @@
+name: Create Issue
+on:
+  workflow_dispatch:
+  push: # Trigger on push events
+    branches:
+      - master
+jobs:
+  create-issue:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: vboctor/mh-gh-actions/create-mantis-issue@v1
+        with:
+          url: 'https://salmanshafiq.mantishub.io/api/rest/issues'
+          api-key: 'NdemqEpCFK3d5tX_b7bN_0nVR1uySVg1'
+          project-id: '1'
+          summary: 'New issue created via GitHub Actions'
+          description: 'Details of the issue...'
