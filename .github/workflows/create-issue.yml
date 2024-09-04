@@ -12,8 +12,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: salman-shafique/mh-actions
-          token: ${{ secrets.ACTIONS_PAT }}
-
       - name: create issue
         uses: salman-shafique/mh-actions@main
         with:
