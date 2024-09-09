@@ -11,28 +11,30 @@ jobs:
       - name: Checkout private action repository
         uses: actions/checkout@v4
         with:
-          repository: salman-shafique/mh-actions
+          repository: salman-shafique/mh-actions/actions/create-issue
       - name: create issue
         uses: salman-shafique/mh-actions/create-mantishub-issue@main
         with:
           url: 'https://salmanshafiq.mantishub.io'
           api-key: 'NdemqEpCFK3d5tX_b7bN_0nVR1uySVg1'
-          project-id: '1'
-          summary: 'New issue created via GitHub Actions'
+          project: 'MyProject'
+          summary: 'This is a test issue from real workflow actions'
+          description: |
+            This is a test description from gh actions
+            bugs fixes
           category: 'General'
-          description: 'Details of the issue...'
           
-      - name: create version
-        uses: salman-shafique/mh-actions/create-mantishub-version@main
-        with:
-          url: 'https://salmanshafiq.mantishub.io'
-          api-key: 'NdemqEpCFK3d5tX_b7bN_0nVR1uySVg1'
-          project-id: '1'
-          name: 'V1.2.0'
-          description: 'relese version 1.2'
-          released: false
-          obsolete: false
-          timestamp: '2024-09-20'
+      # - name: create version
+      #   uses: salman-shafique/mh-actions/create-mantishub-version@main
+      #   with:
+      #     url: 'https://salmanshafiq.mantishub.io'
+      #     api-key: 'NdemqEpCFK3d5tX_b7bN_0nVR1uySVg1'
+      #     project-id: '1'
+      #     name: 'V1.2.0'
+      #     description: 'relese version 1.2'
+      #     released: false
+      #     obsolete: false
+      #     timestamp: '2024-09-20'
 
 
           
