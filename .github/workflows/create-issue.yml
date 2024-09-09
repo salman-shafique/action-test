@@ -13,7 +13,7 @@ jobs:
         with:
           repository: salman-shafique/mh-actions/actions/create-issue
       - name: create issue
-        uses: salman-shafique/mh-actions/create-mantishub-issue@main
+        uses: salman-shafique/mh-actions/actions/create-issue@master
         with:
           url: 'https://salmanshafiq.mantishub.io'
           api-key: 'NdemqEpCFK3d5tX_b7bN_0nVR1uySVg1'
