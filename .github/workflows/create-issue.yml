@@ -11,7 +11,7 @@ jobs:
       - name: Checkout private action repository
         uses: actions/checkout@v4
         with:
-          repository: salman-shafique/mh-actions/actions/create-issue
+          repository: salman-shafique/mh-actions
       - name: create issue
         uses: salman-shafique/mh-actions/actions/create-issue@master
         with:
