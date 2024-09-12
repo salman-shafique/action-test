@@ -5,29 +5,27 @@ on:
     branches:
       - master
 jobs:
-  create-version:
+  create-issue:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout private action repository
         uses: actions/checkout@v4
         with:
-          repository: vboctor/action-create-version
-      - name: Run create Version Action
-        id: create-version
-        uses: vboctor/action-create-version@master
+          repository: vboctor/action-create-issue
+      - name: Run create issue Action
+        id: create-issue
+        uses: vboctor/action-create-issue@master
         with:
           url: 'https://salmanshafiq.mantishub.io'
           api-key: 'NdemqEpCFK3d5tX_b7bN_0nVR1uySVg1'
           project: 'MyProject'
-          name: 'v1.3.13'
+          summary: "Build is broken"
           description: |
-            Release Version 1.1.13
-            For bugs fixes
-          released: false
-          obsolete: true
-          timestamp: '2025-09-20'
+            Unable to submit form.
+            Page loading error
+          category: 'General'
       - name: get output
-        run: echo  ${{ steps.create-version.outputs.version-id }}
+        run: echo  ${{ steps.create-issue.outputs.version-id }}
           
       # - name: create version
       #   uses: salman-shafique/mh-actions/create-mantishub-version@main
