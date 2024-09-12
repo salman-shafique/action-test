@@ -25,7 +25,7 @@ jobs:
             Page loading error
           category: 'General'
       - name: get output
-        run: echo  ${{ steps.create-issue.outputs.version-id }}
+        run: echo  ${{ steps.create-issue.outputs.issue-id }}
           
       # - name: create version
       #   uses: salman-shafique/mh-actions/create-mantishub-version@main
