@@ -5,7 +5,7 @@ on:
     branches:
       - master
 jobs:
-  create-issue:
+  rotate-version:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout private action repository
@@ -14,7 +14,7 @@ jobs:
           repository: vboctor/action-rotate-version
       - name: Run Rotate Version Action
         id: rotate-version
-        uses: vboctor/action-rotate-version@v1
+        uses: vboctor/action-rotate-version@master
         with:
           url: 'https://salmanshafiq.mantishub.io'
           api-key: 'NdemqEpCFK3d5tX_b7bN_0nVR1uySVg1'
