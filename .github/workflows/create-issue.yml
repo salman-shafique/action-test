@@ -5,25 +5,29 @@ on:
     branches:
       - master
 jobs:
-  rotate-version:
+  create-version:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout private action repository
         uses: actions/checkout@v4
         with:
-          repository: vboctor/action-rotate-version
-      - name: Run Rotate Version Action
-        id: rotate-version
-        uses: vboctor/action-rotate-version@master
+          repository: vboctor/action-create-version
+      - name: Run create Version Action
+        id: create-version
+        uses: vboctor/action-create-version@master
         with:
           url: 'https://salmanshafiq.mantishub.io'
           api-key: 'NdemqEpCFK3d5tX_b7bN_0nVR1uySVg1'
           project: 'MyProject'
-          placeholder-name: 'vNext'
-          release-name: "1.21.0"
-          next-release-in-days: 7
+          name: 'v1.3.13'
+          description: |
+            Release Version 1.1.13
+            For bugs fixes
+          released: false
+          obsolete: true
+          timestamp: '2025-09-20'
       - name: get output
-        run: echo  ${{ steps.rotate-version.outputs.version-id }}
+        run: echo  ${{ steps.create-version.outputs.version-id }}
           
       # - name: create version
       #   uses: salman-shafique/mh-actions/create-mantishub-version@main
