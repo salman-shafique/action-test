@@ -11,18 +11,19 @@ jobs:
       - name: Checkout private action repository
         uses: actions/checkout@v4
         with:
-          repository: salman-shafique/mh-actions
-      - name: create issue
-        uses: salman-shafique/mh-actions/actions/create-issue@master
+          repository: vboctor/action-rotate-version
+      - name: Run Rotate Version Action
+        id: rotate-version
+        uses: vboctor/action-rotate-version@v1
         with:
           url: 'https://salmanshafiq.mantishub.io'
           api-key: 'NdemqEpCFK3d5tX_b7bN_0nVR1uySVg1'
           project: 'MyProject'
-          summary: 'This is a test issue from real workflow actions'
-          description: |
-            This is a test description from gh actions
-            bugs fixes
-          category: 'General'
+          placeholder-name: 'vNext'
+          release-name: "1.19.0"
+          next-release-in-days: 7
+      - name: get output
+        run: echo  ${{ steps.rotate-version.outputs.version-id }}
           
       # - name: create version
       #   uses: salman-shafique/mh-actions/create-mantishub-version@main
