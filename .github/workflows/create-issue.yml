@@ -20,7 +20,7 @@ jobs:
           api-key: 'NdemqEpCFK3d5tX_b7bN_0nVR1uySVg1'
           project: 'MyProject'
           placeholder-name: 'vNext'
-          release-name: "1.20.0"
+          release-name: "1.21.0"
           next-release-in-days: 7
       - name: get output
         run: echo  ${{ steps.rotate-version.outputs.version-id }}
